@@ -5,3 +5,13 @@
 .offcanvas-menu-button:hover {
   background-color: #e9ecef;
 }
+
+.button-custom {
+  height: 10rem;
+  width: 10rem;
+}
+
+.body {
+  font-weight: var(--base-weight);
+  font-family: var(--oraclesans);
+}
