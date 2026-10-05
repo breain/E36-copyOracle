@@ -1,0 +1,7 @@
+.main-nav {
+  min-height: 200px;
+}
+
+.offcanvas-menu-button:hover {
+  background-color: #e9ecef;
+}
