@@ -14,4 +14,14 @@
 .body {
   font-weight: var(--base-weight);
   font-family: var(--oraclesans);
+  background-color: #2d2c29;
+}
+
+.footer-link {
+  color: #161513; 
+  text-decoration: none; 
+}
+
+.footer-link:hover {
+  text-decoration: underline; 
 }
