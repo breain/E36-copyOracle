@@ -1,776 +1,1869 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body style="background-color:#eeecea;">
+  <body style="background-color: #eeecea">
     <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
     <![endif]-->
 
-  <nav class="navbar bg-light py-5 px-5">
-    <div class="container-fluid">
-
-      <!-- Left: offcanvas toggle + brand -->
-      <div class="d-flex align-items-center">
-        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-label="Open menu">
-          <i class="bi bi-list fs-1"></i>
-        </button>
-        <a class="navbar-brand ms-2 fs-1" href="#">
-          <svg class="u38-oicn" width="136" height="18" viewBox="0 0 231 30" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid">
-            <path fill="#C74634" d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6" transform="translate(-0.02 0)"></path>
-          </svg>
-        </a>
-      </div>
-
-      <!-- Middle: search -->
-      <form class="d-none d-md-flex flex-grow-1 mx-4" role="search">
-        <div class="input-group">
-          <span class="input-group-text bg-white"><i class="bi bi-search" aria-hidden="true"></i></span>
-          <input class="form-control fs-3" type="search" placeholder=" Search" aria-label="Search">
+    <nav class="navbar bg-light py-5 px-5">
+      <div class="container-fluid">
+        <!-- Left: offcanvas toggle + brand -->
+        <div class="d-flex align-items-center">
+          <button
+            class="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sideMenu"
+            aria-label="Open menu"
+          >
+            <i class="bi bi-list fs-1"></i>
+          </button>
+          <a class="navbar-brand ms-2 fs-1" href="#">
+            <svg
+              class="u38-oicn"
+              width="136"
+              height="18"
+              viewBox="0 0 231 30"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="xMinYMid"
+            >
+              <path
+                fill="#C74634"
+                d="M99.61,19.52h15.24l-8.05-13L92,30H85.27l18-28.17a4.29,4.29,0,0,1,7-.05L128.32,30h-6.73l-3.17-5.25H103l-3.36-5.23m69.93,5.23V0.28h-5.72V27.16a2.76,2.76,0,0,0,.85,2,2.89,2.89,0,0,0,2.08.87h26l3.39-5.25H169.54M75,20.38A10,10,0,0,0,75,.28H50V30h5.71V5.54H74.65a4.81,4.81,0,0,1,0,9.62H58.54L75.6,30h8.29L72.43,20.38H75M14.88,30H32.15a14.86,14.86,0,0,0,0-29.71H14.88a14.86,14.86,0,1,0,0,29.71m16.88-5.23H15.26a9.62,9.62,0,0,1,0-19.23h16.5a9.62,9.62,0,1,1,0,19.23M140.25,30h17.63l3.34-5.23H140.64a9.62,9.62,0,1,1,0-19.23h16.75l3.38-5.25H140.25a14.86,14.86,0,1,0,0,29.71m69.87-5.23a9.62,9.62,0,0,1-9.26-7h24.42l3.36-5.24H200.86a9.61,9.61,0,0,1,9.26-7h16.76l3.35-5.25h-20.5a14.86,14.86,0,0,0,0,29.71h17.63l3.35-5.23h-20.6"
+                transform="translate(-0.02 0)"
+              ></path>
+            </svg>
+          </a>
         </div>
-        <!-- <button class="btn btn-dark" type="submit"><i class="bi bi-search"></i></button> -->
-      </form>
 
-      <!-- Right: icon links -->
-      <ul class="nav">
-        <li class="nav-item"><a class="nav-link text-dark ms-2 fs-4" href="#"><i class="bi bi-globe-americas fs-5"></i></a></li>
-        <li class="nav-item"><a class="nav-link text-dark ms-2 fs-4" href="#"><i class="bi bi-person fs-5"></i></a></li>
-        <li class="nav-item"><a class="nav-link text-dark ms-2 fs-4" href="#"><i class="bi bi-chat-left fs-5"></i></a></li>
-      </ul>
-    </div>
-  </nav>
+        <!-- Middle: search -->
+        <form class="d-none d-md-flex flex-grow-1 mx-4" role="search">
+          <div class="input-group">
+            <span class="input-group-text bg-white"
+              ><i class="bi bi-search" aria-hidden="true"></i
+            ></span>
+            <input
+              class="form-control fs-3"
+              type="search"
+              placeholder=" Search"
+              aria-label="Search"
+            />
+          </div>
+          <!-- <button class="btn btn-dark" type="submit"><i class="bi bi-search"></i></button> -->
+        </form>
 
-  <!----- Start work on main content here ----->
-
-  <!-- buttons at top -->
-  <div class="container-fluid text-center w-100 mx-0 border-bottom border-top">
-    <div class="row align-items-center px-4 py-5 mx-2">
-      <div class="col">
-        <span class="fs-2">Infrastucture</span>
-        <br>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">Cloud</button>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">Multicloud<br>Database</button>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">AI Data<br>Platform</button>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">Cloud@Customer</button>
+        <!-- Right: icon links -->
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link text-dark ms-2 fs-4" href="#"
+              ><i class="bi bi-globe-americas fs-5"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark ms-2 fs-4" href="#"
+              ><i class="bi bi-person fs-5"></i
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark ms-2 fs-4" href="#"
+              ><i class="bi bi-chat-left fs-5"></i
+            ></a>
+          </li>
+        </ul>
       </div>
-      <div class="col">
-        <span class="fs-2">Applications</span>
-        <br>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">Fusion</button>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">Health</button>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">Industries</button>
-        <button class="btn btn-light mt-5 py-5 mx-3 border button-custom">NetSuite</button>
-      </div>
-    </div>
-  </div>
+    </nav>
 
-  <!-- first box -->
-  <div class="container-fluid text-center px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-    <div class="row container-fluid rounded px-3" style="background-color: #053242!important; color: #fff!important;">
-      <div class="col-3 mx-2 py-5" style="margin-left: 10rem!important;">
-        <img src="images/oracle-ai-world.webp" alt="cloud" class="img-fluid">
-      </div>
-      <div class="col mx-2 py-5 text-start" style="margin-right: 10rem!important;">
-        <p class="fs-2"><b>Oracle AI World: October 25-28 | Las Vegas</b></p>
-        <p class="fs-5">Hear Oracle's latest AI vision and strategy, see how AI is delivering business value, and explore what it makes possible across development, data, security, infrastructure, and more.</p>
-        <button type="button" class="btn btn-lg btn-light me-4 mt-5">Register now</button>
-        <button type="button" class="btn btn-lg btn-outline-light mt-5">Explore the keynotes</button>
-      </div>
-    </div>
-  </div>
+    <!----- Start work on main content here ----->
 
-<!-- Article 1 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="row rounded-4 overflow-hidden px-0" style="background-color: #ffffff;">
-    
-    <!-- Left Column -->
-    <div class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center" style="min-height: 800px;">
-      <h1>Oracle Cloud Infrastructure</h1>
-      <p class="fs-5">Oracle offers the highest-performing cloud services at the lowest cost. That's why so many of the world's biggest technology companies use OCI.</p>
-      <p class="fs-5"><b>OCI Tech Customers</b></p>
-      <p class="fs-5">AMD, ByteDance, Meta, NVIDIA, OpenAI, Temu, TikTok, Uber, xAI</p>
-      <p class="fs-5">The demand for cloud infrastructure for AI training and inferencing greatly exceeds supply. In response to this shortage, Oracle is building AI cloud capacity as quickly as we can.</p>
-      <div class="mt-3">
-        <button type="button" class="btn btn-dark btn-lg">Learn more</button>
-      </div>
-    </div>
-
-    <!-- Right Column  -->
-    <div 
-      class="col-md-6 d-flex flex-column justify-content-between p-0" 
-      style="
-        background-image: url('images/oracle-data-center.webp'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 650px;
-      ">
-      
-      <!-- Top Spacer -->
-      <div class="row text-white p-3 m-0"></div>
-
-      <!-- Bottom Card Overlay -->
-      <div class="row bg-white border px-2 py-4 m-4 rounded-4">
-        <div class="col text-dark">
-          <h3>Building the World's Largest AI Cloud</h3>
-          <p class="mb-0">1.2 billion watt Texas data center | 500,000 NVIDIA GPUs</p>
+    <!-- buttons at top -->
+    <div
+      class="container-fluid text-center w-100 mx-0 border-bottom border-top"
+      style="background-color: white"
+    >
+      <div class="row align-items-center px-4 py-5 mx-2">
+        <div class="col">
+          <span class="fs-2 text-secondary fw-light">Infrastructure</span>
+          <br />
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            Cloud
+          </button>
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            Multicloud<br />AI Database
+          </button>
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            AI Data<br />Platform
+          </button>
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            Cloud @<br />Customer
+          </button>
         </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Article 2 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="row rounded-4 overflow-hidden px-0" style="background-color: #ffffff;">
-
-    <!-- Right Column -->
-    <div 
-      class="col-md-6 d-flex flex-column justify-content-between p-0" 
-      style="
-        background-image: url('images/oracle-data-center.webp'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 650px;
-      ">
-      
-      <!-- Top Spacer -->
-      <div class="row text-white p-3 m-0"></div>
-
-      <!-- Bottom Card Overlay -->
-      <div class="row bg-white border px-2 py-4 m-4 rounded-4">
-        <div class="col text-dark">
-          <h3>Oracle AI Database in 200+ Data Centers</h3>
-          <p class="mb-0">Multicloud: 22@AWS, 15@Google, 33@Azure and 135@Oracle Cloud</p>
-        </div>
-      </div>
-    </div>
-      
-
-    <!-- Left Column -->
-    <div class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center" style="min-height: 800px;">
-      <h1 class="text-center mb-5">Multicloud AI Database</h1>
-      <p class="fs-5 text-center">Oracle AI Database in every cloud</p>
-      <p class="fs-5 text-center">Amazon &#xb7; Google &#xb7; Microsoft &#xb7; Oracle</p>
-      <p class="fs-5"><b>Most Advanced Database Technology</b></p>
-      <p class="fs-5">Oracle’s Autonomous and AI Database software running on high-performance Exadata hardware is available in Amazon, Google, Microsoft, and Oracle Cloud data centers all over the world.</p>
-      <p class="fs-5">Pick the cloud you want to use.</p>
-      <p class="fs-5"><a href="#" class="text-decoration-none link-underline">Oracle Multicloud solutions</a></p>
-      <p class="fs-5">Get the same low price everywhere.</p>
-      <div class="mt-3">
-        <button type="button" class="btn btn-dark btn-lg">Learn more</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Article 3 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="row rounded-4 overflow-hidden px-0" style="background-color: #ffffff;">
-    
-    <!-- Left Column -->
-    <div class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center" style="min-height: 800px;">
-      <h1>AI Data Platform</h1>
-      <p class="fs-5">Unify enterprise data, business semantics, and AI development in one environment, so teams can deploy agents that surface trusted insights, automate work, and drive action across Oracle and third-party systems.</p>
-      <p class="fs-5"><b>Governed enterprise data</b></p>
-      <p class="fs-5">Connect structured and unstructured data from across your business.</p>
-      <p class="fs-5"><b>Business context</b></p>
-      <p class="fs-5">Ground AI with business entities, relationships, and processes that define how you operate.</p>
-      <p class="fs-5"><b>Agentic insights and actions</b></p>
-      <p class="fs-5">Put agents and intelligence into workflows where decisions are made and outcomes achieved.</p>
-      <div class="mt-3">
-        <button type="button" class="btn btn-dark btn-lg">Learn more</button>
-      </div>
-    </div>
-
-    <!-- Right Column  -->
-    <div 
-      class="col-md-6 d-flex flex-column justify-content-between p-0" 
-      style="
-        background-image: url('images/oracle-data-center.webp'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 650px;
-      ">
-      
-      <!-- Top Spacer -->
-      <div class="row text-white p-3 m-0"></div>
-
-      <!-- Bottom Card Overlay -->
-      <div class="row bg-white border px-2 py-4 m-4 rounded-4">
-        <div class="col text-dark">
-          <h3>Enabling the agentic enterprise</h3>
-          <p class="mb-0">AI Agents that understand your business and automate insights and workflows</p>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Article 4 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="row rounded-4 overflow-hidden px-0" style="background-color: #ffffff;">
-
-    <!-- Image Column -->
-    <div 
-      class="col-md-6 d-flex flex-column justify-content-between p-0" 
-      style="
-        background-image: url('images/oracle-data-center.webp'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 650px;
-      ">
-      
-      <!-- Top Spacer -->
-      <div class="row text-white p-3 m-0"></div>
-
-      <!-- Bottom Card Overlay -->
-      <div class="row bg-white border px-2 py-4 m-4 rounded-4">
-        <div class="col text-dark">
-          <h3>All OCI Services in 3 Racks</h3>
-          <p class="mb-0">Installed in your data center from $250,000 per month</p>
+        <div class="col">
+          <span class="fs-2 text-secondary fw-light">Applications</span>
+          <br />
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            Fusion
+          </button>
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            Health Suite
+          </button>
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            Industries
+          </button>
+          <button class="btn btn-light mt-4 mx-3 border-3 button-custom">
+            NetSuite
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- Text Column -->
-    <div class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center" style="min-height: 800px;">
-      <h1 class="text-center mb-5">Cloud@Customer</h1>
-      <p class="fs-5 mb-2"><b>All OCI Services and Applications</b></p>
-      <p class="fs-5">Put the entire Oracle Cloud inside your data center. Cloud@Customer includes every Oracle infrastructure service and application. Your data and network traffic stay secure and private inside your data center and behind your firewall.</p>
-      <p class="fs-5 mb-2"><b>Enable AI on your Private Data</b></p>
-      <p class="fs-5">Now you can do AI inferencing and multistep reasoning on your private data while keeping that data private.</p>
-      <div class="mt-3">
-        <button type="button" class="btn btn-dark btn-lg">Learn more</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Article 5 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="row rounded-4 overflow-hidden px-0" style="background-color: #ffffff;">
-    
-    <!-- Left Column -->
-    <div class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center" style="min-height: 800px;">
-      <h1 class="text-center mb-5">Fusion Applications</h1>
-      <p class="fs-5">Fusion is the only application suite that brings AI to every aspect of your business:</p>
-      <p class="fs-5 mb-2"><b>ERP Applications</b></p>
-      <p class="fs-5">
-        <a href="#" class="text-decoration-none link-underline">Finance and Accounting</a><br>
-        <a href="#" class="text-decoration-none link-underline">Supply Chain and Manufacturing</a>
-      </p>
-      <p class="fs-5 mb-2"><b>HCM Applications</b></p>
-      <p class="fs-5">
-        <a href="#" class="text-decoration-none link-underline">Human Resources</a><br>
-        <a href="#" class="text-decoration-none link-underline">Payroll</a>
-      </p>
-      <p class="fs-5 mb-2"><b>Customer Experience</b></p>
-      <p class="fs-5">
-        <a href="#" class="text-decoration-none link-underline">Marketing</a><br>
-        <a href="#" class="text-decoration-none link-underline">Sales</a><br>
-        <a href="#" class="text-decoration-none link-underline">Service</a>
-      </p>
-      <div class="mt-3">
-        <button type="button" class="btn btn-dark btn-lg">Learn more</button>
-      </div>
-    </div>
-
-    <!-- Right Column  -->
-    <div 
-      class="col-md-6 d-flex flex-column justify-content-between p-0" 
-      style="
-        background-image: url('images/oracle-data-center.webp'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 650px;
-      ">
-      
-      <!-- Top Spacer -->
-      <div class="row text-white p-3 m-0"></div>
-
-      <!-- Bottom Card Overlay -->
-      <div class="row bg-white border px-2 py-4 m-4 rounded-4">
-        <div class="col text-dark">
-          <h3>DHL Supply Chain runs on Oracle Fusion</h3>
-          <p class="mb-0">Modernizes back-office operations and enables innovation</p>
+    <!-- first box -->
+    <div
+      class="container-fluid text-center px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row container-fluid rounded px-3"
+        style="background-color: #053242 !important; color: #fff !important"
+      >
+        <div class="col-3 mx-2 py-5" style="margin-left: 10rem !important">
+          <img
+            src="images/oracle-ai-world.webp"
+            alt="cloud"
+            class="img-fluid"
+          />
         </div>
-      </div>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Article 6 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="row rounded-4 overflow-hidden px-0" style="background-color: #ffffff;">
-
-    <!-- Image Column -->
-    <div 
-      class="col-md-6 d-flex flex-column justify-content-between p-0" 
-      style="
-        background-image: url('images/oracle-data-center.webp'); 
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        min-height: 650px;
-      ">
-      
-      <!-- Top Spacer -->
-      <div class="row text-white p-3 m-0"></div>
-
-      <!-- Bottom Card Overlay -->
-      <div class="row bg-white border px-2 py-4 m-4 rounded-4">
-        <div class="col text-dark">
-          <h3>Digital Ambulance</h3>
-          <p class="mb-0">Patients are continually monitored in transit by hospital ER doctors</p>
+        <div
+          class="col mx-2 py-5 text-start"
+          style="margin-right: 10rem !important"
+        >
+          <p class="fs-2"><b>Oracle AI World: October 25-28 | Las Vegas</b></p>
+          <p class="fs-5">
+            Hear Oracle's latest AI vision and strategy, see how AI is
+            delivering business value, and explore what it makes possible across
+            development, data, security, infrastructure, and more.
+          </p>
+          <button type="button" class="btn btn-lg btn-light me-4 mt-5">
+            Register now
+          </button>
+          <button type="button" class="btn btn-lg btn-outline-light mt-5">
+            Explore the keynotes
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- Text Column -->
-    <div class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center" style="min-height: 800px;">
-      <h1 class="text-center mb-5">Health Application Suite</h1>
-      <p class="fs-5">Oracle Health is the first of our Application Suites to be entirely rebuilt as a set of AI Agents connected by workflows. The Oracle Health Suite includes applications for managing the entire healthcare ecosystem including providers: ambulatory clinics, acute care hospitals; payers: insurance companies, governments; and public health and regulatory agencies.</p>
-      <p class="fs-5 mb-2"><b>Healthcare Applications</b></p>
-      <p class="fs-5">
-        Ambulatory Care System for Clinics<br>
-        Acute Care System for Hospitals<br>
-        Clinical and Financial Operations<br>
-        Payer Preauthorization System
-      </p>
-      <p class="fs-5 mb-2"><b>Healthcare Technology Foundation</b></p>
-      <p class="fs-5">
-        Oracle Cloud Infrastructure<br>
-        AI Data Platform<br>
-        Oracle AI Database
-      </p>
-      <div class="mt-3">
-        <button type="button" class="btn btn-dark btn-lg">Learn more</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Article 7 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="rounded-4 overflow-hidden border px-5 py-5" style="background-color: #ffffff;">
-
-    <!-- Title -->
-    <h1 class="mb-4 ps-5">Industry Specific Applications</h1>
-
-    <div class="row">
-
-      <!-- Left Column: Text -->
-      <div class="col text-start">
-        <p class="fs-5">Oracle provides industry specific cloud application suites for more than two dozen industries. These are modern SaaS applications with built-in AI, machine learning, and analytics. These industry applications integrate seamlessly with core business functions in Fusion ERP, HCM, Supply Chain, Finance, and Customer Experience. Here are a few examples:</p>
-        <p class="fs-5 mb-2"><b>Banking Suite</b></p>
-        <p class="fs-5">Includes core banking, anti-money laundering, risk management, compliance, and AI analytics.</p>
-        <p class="fs-5 mb-2"><b>Construction and Engineering</b></p>
-        <p class="fs-5">Includes project management, procurement, supplier analytics, subcontractor payments, cost controls, and more.</p>
-        <p class="fs-5 mb-2"><b>RetailSuite</b></p>
-        <p class="fs-5">Includes merchandising, multistore inventory management, omnichannel demand forecasting, etc.</p>
-        <div class="mt-3">
-          <button type="button" class="btn btn-dark btn-lg">Learn More</button>
+    <!-- Article 1 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row rounded-4 overflow-hidden px-0"
+        style="background-color: #ffffff"
+      >
+        <!-- Left Column -->
+        <div
+          class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center"
+          style="min-height: 800px"
+        >
+          <h1>Oracle Cloud Infrastructure</h1>
+          <p class="fs-5">
+            Oracle offers the highest-performing cloud services at the lowest
+            cost. That's why so many of the world's biggest technology companies
+            use OCI.
+          </p>
+          <p class="fs-5"><b>OCI Tech Customers</b></p>
+          <p class="fs-5">
+            AMD, ByteDance, Meta, NVIDIA, OpenAI, Temu, TikTok, Uber, xAI
+          </p>
+          <p class="fs-5">
+            The demand for cloud infrastructure for AI training and inferencing
+            greatly exceeds supply. In response to this shortage, Oracle is
+            building AI cloud capacity as quickly as we can.
+          </p>
+          <div class="mt-3">
+            <button type="button" class="btn btn-dark btn-lg">
+              Learn more
+            </button>
+          </div>
         </div>
-      </div>
 
-      <!-- Right Column: Gray link panel -->
-      <div class="col-md-6">
-        <div class="bg-light rounded-4 p-5 h-100" style="background-color: #eeecea;">
-          <div class="row">
+        <!-- Right Column  -->
+        <div
+          class="col-md-6 d-flex flex-column justify-content-between p-0"
+          style="
+            background-image: url(&quot;images/oracle-data-center.webp&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 650px;
+          "
+        >
+          <!-- Top Spacer -->
+          <div class="row text-white p-3 m-0"></div>
 
-            <!-- Links column 1 -->
-            <div class="col-6 fs-5">
-              <p>
-                <a href="#" class="text-decoration-none">Automotive</a><br>
-                <a href="#" class="text-decoration-none">Communications</a><br>
-                <a href="#" class="text-decoration-none">Construction and Engineering</a><br>
-                <a href="#" class="text-decoration-none">Consumer Packaged Goods</a>
-              </p>
-              <p>
-                <a href="#" class="text-decoration-none">Defense and Intelligence</a><br>
-                <a href="#" class="text-decoration-none">Education</a><br>
-                <a href="#" class="text-decoration-none">Financial Services</a><br>
-                <a href="#" class="text-decoration-none">Government - National, State, Local</a>
-              </p>
+          <!-- Bottom Card Overlay -->
+          <div class="row bg-white border px-2 py-4 m-4 rounded-4">
+            <div class="col text-dark">
+              <h3>Building the World's Largest AI Cloud</h3>
               <p class="mb-0">
-                <a href="#" class="text-decoration-none">Healthcare</a><br>
-                <a href="#" class="text-decoration-none">High Technology</a><br>
-                <a href="#" class="text-decoration-none">Hospitality - Hotels</a><br>
-                <a href="#" class="text-decoration-none">Industrial Manufacturing</a>
+                1.2 billion watt Texas data center | 500,000 NVIDIA GPUs
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            <!-- Links column 2 -->
-            <div class="col-6 fs-5">
-              <p>
-                <a href="#" class="text-decoration-none">Life Sciences</a><br>
-                <a href="#" class="text-decoration-none">Media and Entertainment</a><br>
-                <a href="#" class="text-decoration-none">Oil and Gas</a><br>
-                <a href="#" class="text-decoration-none">Professional Services</a>
-              </p>
-              <p>
-                <a href="#" class="text-decoration-none">Public Safety - Police, Fire, Ambulance EMT</a><br>
-                <a href="#" class="text-decoration-none">Restaurants</a><br>
-                <a href="#" class="text-decoration-none">Retail</a><br>
-                <a href="#" class="text-decoration-none">Travel and Logistics</a>
-              </p>
+    <!-- Article 2 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row rounded-4 overflow-hidden px-0"
+        style="background-color: #ffffff"
+      >
+        <!-- Right Column -->
+        <div
+          class="col-md-6 d-flex flex-column justify-content-between p-0"
+          style="
+            background-image: url(&quot;images/ai-database.webp&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 650px;
+          "
+        >
+          <!-- Top Spacer -->
+          <div class="row text-white p-3 m-0"></div>
+
+          <!-- Bottom Card Overlay -->
+          <div class="row bg-white border px-2 py-4 m-4 rounded-4">
+            <div class="col text-dark">
+              <h3>Oracle AI Database in 200+ Data Centers</h3>
               <p class="mb-0">
-                <a href="#" class="text-decoration-none">Utilities</a><br>
-                <a href="#" class="text-decoration-none">Wholesale Distribution</a>
+                Multicloud: 22@AWS, 15@Google, 33@Azure and 135@Oracle Cloud
               </p>
             </div>
+          </div>
+        </div>
 
+        <!-- Left Column -->
+        <div
+          class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center"
+          style="min-height: 800px"
+        >
+          <h1 class="text-center mb-5">Multicloud AI Database</h1>
+          <p class="fs-5 text-center">Oracle AI Database in every cloud</p>
+          <p class="fs-5 text-center">
+            Amazon &#xb7; Google &#xb7; Microsoft &#xb7; Oracle
+          </p>
+          <p class="fs-5"><b>Most Advanced Database Technology</b></p>
+          <p class="fs-5">
+            Oracle’s Autonomous and AI Database software running on
+            high-performance Exadata hardware is available in Amazon, Google,
+            Microsoft, and Oracle Cloud data centers all over the world.
+          </p>
+          <p class="fs-5">Pick the cloud you want to use.</p>
+          <p class="fs-5">
+            <a href="#" class="text-decoration-none link-underline"
+              >Oracle Multicloud solutions</a
+            >
+          </p>
+          <p class="fs-5">Get the same low price everywhere.</p>
+          <div class="mt-3">
+            <button type="button" class="btn btn-dark btn-lg">
+              Learn more
+            </button>
           </div>
         </div>
       </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Article 8 -->
-<div class="container-fluid px-4 py-4" style="padding-left:5rem!important; padding-right:5rem!important;">
-  <div class="rounded-4 overflow-hidden border px-5 py-5" style="background-color: #ffffff;">
-
-    <!-- Title (centered over the right half) -->
-    <div class="row">
-      <div class="col-md-6 offset-md-6 text-center">
-        <h1 class="mb-5">NetSuite</h1>
-      </div>
     </div>
 
-    <div class="row">
-
-      <!-- Left Column: Gray panel -->
-      <div class="col-md-5">
-        <div class="bg-light rounded-4 p-4 h-100" style="background-color: #eeecea;">
-          <h1 class="mb-2">First Cloud Company</h1>
-          <p class="fs-5 mb-4">NetSuite pioneered a new generation of SaaS applications and cloud technology.</p>
-
-          <div class="d-flex align-items-center mb-4">
-            <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-white me-3" style="width:50px; height:50px; background-color:#5F7C7B;">
-              <i class="bi bi-globe fs-4"></i>
-            </div>
-            <span class="fs-5">44,000+ customers in 200+ countries and dependent territories</span>
+    <!-- Article 3 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row rounded-4 overflow-hidden px-0"
+        style="background-color: #ffffff"
+      >
+        <!-- Left Column -->
+        <div
+          class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center"
+          style="min-height: 800px"
+        >
+          <h1>AI Data Platform</h1>
+          <p class="fs-5">
+            Unify enterprise data, business semantics, and AI development in one
+            environment, so teams can deploy agents that surface trusted
+            insights, automate work, and drive action across Oracle and
+            third-party systems.
+          </p>
+          <p class="fs-5"><b>Governed enterprise data</b></p>
+          <p class="fs-5">
+            Connect structured and unstructured data from across your business.
+          </p>
+          <p class="fs-5"><b>Business context</b></p>
+          <p class="fs-5">
+            Ground AI with business entities, relationships, and processes that
+            define how you operate.
+          </p>
+          <p class="fs-5"><b>Agentic insights and actions</b></p>
+          <p class="fs-5">
+            Put agents and intelligence into workflows where decisions are made
+            and outcomes achieved.
+          </p>
+          <div class="mt-3">
+            <button type="button" class="btn btn-dark btn-lg">
+              Learn more
+            </button>
           </div>
+        </div>
 
-          <div class="d-flex align-items-center mb-4">
-            <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-white me-3" style="width:50px; height:50px; background-color:#5F7C7B;">
-              <i class="bi bi-people fs-4"></i>
-            </div>
-            <span class="fs-5">77% of the Forbes Cloud 100 companies are NetSuite customers</span>
-          </div>
+        <!-- Right Column  -->
+        <div
+          class="col-md-6 d-flex flex-column justify-content-between p-0"
+          style="
+            background-image: url(&quot;images/agentic-enterprise-pill.avif&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 650px;
+          "
+        >
+          <!-- Top Spacer -->
+          <div class="row text-white p-3 m-0"></div>
 
-          <div class="d-flex align-items-center">
-            <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-white me-3" style="width:50px; height:50px; background-color:#5F7C7B;">
-              <i class="bi bi-bar-chart fs-4"></i>
+          <!-- Bottom Card Overlay -->
+          <div class="row bg-white border px-2 py-4 m-4 rounded-4">
+            <div class="col text-dark">
+              <h3>Enabling the agentic enterprise</h3>
+              <p class="mb-0">
+                AI Agents that understand your business and automate insights
+                and workflows
+              </p>
             </div>
-            <span class="fs-5">61% of technology IPOs since 2011 are NetSuite customers</span>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Right Column: Two text columns -->
-      <div class="col-md-7 ps-md-5">
+    <!-- Article 4 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row rounded-4 overflow-hidden px-0"
+        style="background-color: #ffffff"
+      >
+        <!-- Image Column -->
+        <div
+          class="col-md-6 d-flex flex-column justify-content-between p-0"
+          style="
+            background-image: url(&quot;images/catc.webp&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 650px;
+          "
+        >
+          <!-- Top Spacer -->
+          <div class="row text-white p-3 m-0"></div>
+
+          <!-- Bottom Card Overlay -->
+          <div class="row bg-white border px-2 py-4 m-4 rounded-4">
+            <div class="col text-dark">
+              <h3>All OCI Services in 3 Racks</h3>
+              <p class="mb-0">
+                Installed in your data center from $250,000 per month
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div
+          class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center"
+          style="min-height: 800px"
+        >
+          <h1 class="text-center mb-5">Cloud@Customer</h1>
+          <p class="fs-5 mb-2"><b>All OCI Services and Applications</b></p>
+          <p class="fs-5">
+            Put the entire Oracle Cloud inside your data center. Cloud@Customer
+            includes every Oracle infrastructure service and application. Your
+            data and network traffic stay secure and private inside your data
+            center and behind your firewall.
+          </p>
+          <p class="fs-5 mb-2"><b>Enable AI on your Private Data</b></p>
+          <p class="fs-5">
+            Now you can do AI inferencing and multistep reasoning on your
+            private data while keeping that data private.
+          </p>
+          <div class="mt-3">
+            <button type="button" class="btn btn-dark btn-lg">
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 5 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row rounded-4 overflow-hidden px-0"
+        style="background-color: #ffffff"
+      >
+        <!-- Left Column -->
+        <div
+          class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center"
+          style="min-height: 800px"
+        >
+          <h1 class="text-center mb-5">Fusion Applications</h1>
+          <p class="fs-5">
+            Fusion is the only application suite that brings AI to every aspect
+            of your business:
+          </p>
+          <p class="fs-5 mb-2"><b>ERP Applications</b></p>
+          <p class="fs-5">
+            <a href="#" class="text-decoration-none link-underline"
+              >Finance and Accounting</a
+            ><br />
+            <a href="#" class="text-decoration-none link-underline"
+              >Supply Chain and Manufacturing</a
+            >
+          </p>
+          <p class="fs-5 mb-2"><b>HCM Applications</b></p>
+          <p class="fs-5">
+            <a href="#" class="text-decoration-none link-underline"
+              >Human Resources</a
+            ><br />
+            <a href="#" class="text-decoration-none link-underline">Payroll</a>
+          </p>
+          <p class="fs-5 mb-2"><b>Customer Experience</b></p>
+          <p class="fs-5">
+            <a href="#" class="text-decoration-none link-underline">Marketing</a
+            ><br />
+            <a href="#" class="text-decoration-none link-underline">Sales</a
+            ><br />
+            <a href="#" class="text-decoration-none link-underline">Service</a>
+          </p>
+          <div class="mt-3">
+            <button type="button" class="btn btn-dark btn-lg">
+              Learn more
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column  -->
+        <div
+          class="col-md-6 d-flex flex-column justify-content-between p-0"
+          style="
+            background-image: url(&quot;images/fusion-apps.webp&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 650px;
+          "
+        >
+          <!-- Top Spacer -->
+          <div class="row text-white p-3 m-0"></div>
+
+          <!-- Bottom Card Overlay -->
+          <div class="row bg-white border px-2 py-4 m-4 rounded-4">
+            <div class="col text-dark">
+              <h3>DHL Supply Chain runs on Oracle Fusion</h3>
+              <p class="mb-0">
+                Modernizes back-office operations and enables innovation
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 6 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="row rounded-4 overflow-hidden px-0"
+        style="background-color: #ffffff"
+      >
+        <!-- Image Column -->
+        <div
+          class="col-md-6 d-flex flex-column justify-content-between p-0"
+          style="
+            background-image: url(&quot;images/health.webp&quot;);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 650px;
+          "
+        >
+          <!-- Top Spacer -->
+          <div class="row text-white p-3 m-0"></div>
+
+          <!-- Bottom Card Overlay -->
+          <div class="row bg-white border px-2 py-4 m-4 rounded-4">
+            <div class="col text-dark">
+              <h3>Digital Ambulance</h3>
+              <p class="mb-0">
+                Patients are continually monitored in transit by hospital ER
+                doctors
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div
+          class="col-md-6 border px-5 py-5 text-start d-flex flex-column justify-content-center"
+          style="min-height: 800px"
+        >
+          <h1 class="text-center mb-5">Health Application Suite</h1>
+          <p class="fs-5">
+            Oracle Health is the first of our Application Suites to be entirely
+            rebuilt as a set of AI Agents connected by workflows. The Oracle
+            Health Suite includes applications for managing the entire
+            healthcare ecosystem including providers: ambulatory clinics, acute
+            care hospitals; payers: insurance companies, governments; and public
+            health and regulatory agencies.
+          </p>
+          <p class="fs-5 mb-2"><b>Healthcare Applications</b></p>
+          <p class="fs-5">
+            Ambulatory Care System for Clinics<br />
+            Acute Care System for Hospitals<br />
+            Clinical and Financial Operations<br />
+            Payer Preauthorization System
+          </p>
+          <p class="fs-5 mb-2"><b>Healthcare Technology Foundation</b></p>
+          <p class="fs-5">
+            Oracle Cloud Infrastructure<br />
+            AI Data Platform<br />
+            Oracle AI Database
+          </p>
+          <div class="mt-3">
+            <button type="button" class="btn btn-dark btn-lg">
+              Learn more
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Article 7 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="rounded-4 overflow-hidden border px-5 py-5"
+        style="background-color: #ffffff"
+      >
+        <!-- Title -->
+        <h1 class="mb-4 ps-5">Industry Specific Applications</h1>
+
         <div class="row">
-
-          <div class="col-md-6 text-start">
-            <p class="fs-5 mb-2"><b>Finance and Accounting</b></p>
-            <p class="fs-5">General Ledger, AP/AR, tax management, and more</p>
-            <p class="fs-5 mb-2"><b>Global</b></p>
-            <p class="fs-5">Consolidation, Multicurrency, Multilanguage</p>
-            <p class="fs-5 mb-2"><b>CRM</b></p>
-            <p class="fs-5">Sales, Marketing, Customer Service</p>
-            <p class="fs-5 mb-3"><b>Planning and Budgeting</b></p>
-            <button type="button" class="btn btn-dark btn-lg">Learn More</button>
+          <!-- Left Column: Text -->
+          <div class="col text-start">
+            <p class="fs-5">
+              Oracle provides industry specific cloud application suites for
+              more than two dozen industries. These are modern SaaS applications
+              with built-in AI, machine learning, and analytics. These industry
+              applications integrate seamlessly with core business functions in
+              Fusion ERP, HCM, Supply Chain, Finance, and Customer Experience.
+              Here are a few examples:
+            </p>
+            <p class="fs-5 mb-2"><b>Banking Suite</b></p>
+            <p class="fs-5">
+              Includes core banking, anti-money laundering, risk management,
+              compliance, and AI analytics.
+            </p>
+            <p class="fs-5 mb-2"><b>Construction and Engineering</b></p>
+            <p class="fs-5">
+              Includes project management, procurement, supplier analytics,
+              subcontractor payments, cost controls, and more.
+            </p>
+            <p class="fs-5 mb-2"><b>RetailSuite</b></p>
+            <p class="fs-5">
+              Includes merchandising, multistore inventory management,
+              omnichannel demand forecasting, etc.
+            </p>
+            <div class="mt-3">
+              <button type="button" class="btn btn-dark btn-lg">
+                Learn More
+              </button>
+            </div>
           </div>
 
-          <div class="col-md-6 text-start">
-            <p class="fs-5 mb-2"><b>E-Commerce</b></p>
-            <p class="fs-5">Full featured online store B2B, B2C</p>
-            <p class="fs-5 mb-2"><b>Human Capital Management</b></p>
-            <p class="fs-5">HR and Payroll</p>
-            <p class="fs-5 mb-2"><b>Analytics and Reporting</b></p>
-            <p class="fs-5">Dashboards, KPIs, AI Queries</p>
-            <p class="fs-5 mb-2"><b>Supply Chain and Manufacturing Resource Planning</b></p>
-          </div>
+          <!-- Right Column: Gray link panel -->
+          <div class="col-md-6">
+            <div
+              class="bg-light rounded-4 p-5 h-100"
+              style="background-color: #eeecea"
+            >
+              <div class="row">
+                <!-- Links column 1 -->
+                <div class="col-6 fs-5">
+                  <p>
+                    <a href="#" class="text-decoration-none">Automotive</a
+                    ><br />
+                    <a href="#" class="text-decoration-none">Communications</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Construction and Engineering</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Consumer Packaged Goods</a
+                    >
+                  </p>
+                  <p>
+                    <a href="#" class="text-decoration-none"
+                      >Defense and Intelligence</a
+                    ><br />
+                    <a href="#" class="text-decoration-none">Education</a><br />
+                    <a href="#" class="text-decoration-none"
+                      >Financial Services</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Government - National, State, Local</a
+                    >
+                  </p>
+                  <p class="mb-0">
+                    <a href="#" class="text-decoration-none">Healthcare</a
+                    ><br />
+                    <a href="#" class="text-decoration-none">High Technology</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Hospitality - Hotels</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Industrial Manufacturing</a
+                    >
+                  </p>
+                </div>
 
+                <!-- Links column 2 -->
+                <div class="col-6 fs-5">
+                  <p>
+                    <a href="#" class="text-decoration-none">Life Sciences</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Media and Entertainment</a
+                    ><br />
+                    <a href="#" class="text-decoration-none">Oil and Gas</a
+                    ><br />
+                    <a href="#" class="text-decoration-none"
+                      >Professional Services</a
+                    >
+                  </p>
+                  <p>
+                    <a href="#" class="text-decoration-none"
+                      >Public Safety - Police, Fire, Ambulance EMT</a
+                    ><br />
+                    <a href="#" class="text-decoration-none">Restaurants</a
+                    ><br />
+                    <a href="#" class="text-decoration-none">Retail</a><br />
+                    <a href="#" class="text-decoration-none"
+                      >Travel and Logistics</a
+                    >
+                  </p>
+                  <p class="mb-0">
+                    <a href="#" class="text-decoration-none">Utilities</a><br />
+                    <a href="#" class="text-decoration-none"
+                      >Wholesale Distribution</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
 
-    </div>
-  </div>
-</div>
+    <!-- Article 8 -->
+    <div
+      class="container-fluid px-4 py-4"
+      style="padding-left: 5rem !important; padding-right: 5rem !important"
+    >
+      <div
+        class="rounded-4 overflow-hidden border px-5 py-5"
+        style="background-color: #ffffff"
+      >
+        <!-- Title (centered over the right half) -->
+        <div class="row">
+          <div class="col-md-6 offset-md-6 text-center">
+            <h1 class="mb-5">NetSuite</h1>
+          </div>
+        </div>
 
-<!-- Footer -->
-<footer class="py-4 bg-white">
-  <div class="container-fluid px-5">
-    <div class="d-flex flex-wrap align-items-center justify-content-start gap-3 my-4 mx-5">
+        <div class="row">
+          <!-- Left Column: Gray panel -->
+          <div class="col-md-5">
+            <div
+              class="bg-light rounded-4 p-4 h-100"
+              style="background-color: #eeecea"
+            >
+              <h1 class="mb-2">First Cloud Company</h1>
+              <p class="fs-5 mb-4">
+                NetSuite pioneered a new generation of SaaS applications and
+                cloud technology.
+              </p>
 
-      <!-- Text links -->
-      <ul class="nav align-items-center small">
-        <li class="nav-item pe-3 me-3 border-end"><a href="#" class="footer-link">&copy; 2026 Oracle</a></li>
-        <li class="nav-item pe-3">
-          <a href="#" class="footer-link">Privacy</a>
-          <span class="mx-1 fs-5">/</span>
-          <a href="#" class="footer-link">Do Not Sell My Info</a>
-        </li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link">Cookie Preferences</a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link">Ad Choices</a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link">Careers</a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link">Subscribe to emails</a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link">Integrity Helpline</a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link">Resources</a></li>
-        <li class="nav-item"><a href="#" class="footer-link">Contact Us</a></li>
-      </ul>
+              <div class="d-flex align-items-center mb-4">
+                <div
+                  class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-white me-3"
+                  style="width: 50px; height: 50px; background-color: #5f7c7b"
+                >
+                  <i class="bi bi-globe fs-4"></i>
+                </div>
+                <span class="fs-5"
+                  >44,000+ customers in 200+ countries and dependent
+                  territories</span
+                >
+              </div>
 
-      <!-- Social icons -->
-      <ul class="nav align-items-center">
-        <li class="nav-item pe-4 ms-lg-5"><a href="#" class="footer-link fs-3" aria-label="Facebook"><i class="bi bi-facebook"></i></a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link fs-3" aria-label="X"><i class="bi bi-twitter-x"></i></a></li>
-        <li class="nav-item pe-4"><a href="#" class="footer-link fs-3" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
-        <li class="nav-item"><a href="#" class="footer-link fs-3" aria-label="YouTube"><i class="bi bi-youtube"></i></a></li>
-      </ul>
+              <div class="d-flex align-items-center mb-4">
+                <div
+                  class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-white me-3"
+                  style="width: 50px; height: 50px; background-color: #5f7c7b"
+                >
+                  <i class="bi bi-people fs-4"></i>
+                </div>
+                <span class="fs-5"
+                  >77% of the Forbes Cloud 100 companies are NetSuite
+                  customers</span
+                >
+              </div>
 
-    </div>
-  </div>
-</footer> 
+              <div class="d-flex align-items-center">
+                <div
+                  class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0 text-white me-3"
+                  style="width: 50px; height: 50px; background-color: #5f7c7b"
+                >
+                  <i class="bi bi-bar-chart fs-4"></i>
+                </div>
+                <span class="fs-5"
+                  >61% of technology IPOs since 2011 are NetSuite
+                  customers</span
+                >
+              </div>
+            </div>
+          </div>
 
-  <!-- Offcanvas main -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
-    <div class="offcanvas-header">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mt-5 mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#cloudSubMenu" aria-controls="cloudSubMenu"><span>Cloud</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#multicloudDatabaseSubMenu" aria-controls="multicloudDatabaseSubMenu"><span>Multicloud Database</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#aiDataPlatformSubMenu" aria-controls="aiDataPlatformSubMenu"><span>AI Data Platform</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#cloudAtCustomerSubMenu" aria-controls="cloudAtCustomerSubMenu"><span>Cloud@Customer</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#fusionSubMenu" aria-controls="fusionSubMenu"><span>Fusion</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#healthSubMenu" aria-controls="healthSubMenu"><span>Health</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#industriesSubMenu" aria-controls="industriesSubMenu"><span>Industries</span><span aria-hidden="true">&gt;</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>NetSuite</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#companySubMenu" aria-controls="companySubMenu"><span>Company</span><span aria-hidden="true">&gt;</span></button></li>
-      </ul>
-    </div>
-  </div>
+          <!-- Right Column: Two text columns -->
+          <div class="col-md-7 ps-md-5">
+            <div class="row">
+              <div class="col-md-6 text-start">
+                <p class="fs-5 mb-2"><b>Finance and Accounting</b></p>
+                <p class="fs-5">
+                  General Ledger, AP/AR, tax management, and more
+                </p>
+                <p class="fs-5 mb-2"><b>Global</b></p>
+                <p class="fs-5">Consolidation, Multicurrency, Multilanguage</p>
+                <p class="fs-5 mb-2"><b>CRM</b></p>
+                <p class="fs-5">Sales, Marketing, Customer Service</p>
+                <p class="fs-5 mb-3"><b>Planning and Budgeting</b></p>
+                <button type="button" class="btn btn-dark btn-lg">
+                  Learn More
+                </button>
+              </div>
 
-  <!-- offcanvas cloud -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="cloudSubMenu" aria-labelledby="cloudSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="cloudSubMenuTitle">Cloud</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <div class="col-md-6 text-start">
+                <p class="fs-5 mb-2"><b>E-Commerce</b></p>
+                <p class="fs-5">Full featured online store B2B, B2C</p>
+                <p class="fs-5 mb-2"><b>Human Capital Management</b></p>
+                <p class="fs-5">HR and Payroll</p>
+                <p class="fs-5 mb-2"><b>Analytics and Reporting</b></p>
+                <p class="fs-5">Dashboards, KPIs, AI Queries</p>
+                <p class="fs-5 mb-2">
+                  <b>Supply Chain and Manufacturing Resource Planning</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Cloud Overview</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>AI and Machine Learning</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>AI Data Platform</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Analytics</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Billing and Cost Management</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Compute</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Database Services</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Developer Services</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Distributed Cloud and Multicloud</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Governance and Administration</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Identity and Security</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Integration</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Migration and Disaster Recovery Services</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Networking and Connectivity</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Observability and Management</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Storage</span></button></li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- offcanvas multicloud database -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="multicloudDatabaseSubMenu" aria-labelledby="multicloudDatabaseSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="multicloudDatabaseSubMenuTitle">Multicloud Database</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Oracle AI Database Overview</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>AI Database</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Multicloud</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>MYSQL HeatWave</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>NoSQL</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>OpenSearch</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>PostgreSQL</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Redis Cache</span></button></li>
-      </ul>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer class="py-4 bg-white">
+      <div class="container-fluid px-5">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-start gap-3 my-4 mx-5"
+        >
+          <!-- Text links -->
+          <ul class="nav align-items-center small">
+            <li class="nav-item pe-3 me-3 border-end">
+              <a href="#" class="footer-link">&copy; 2026 Oracle</a>
+            </li>
+            <li class="nav-item pe-3">
+              <a href="#" class="footer-link">Privacy</a>
+              <span class="mx-1 fs-5">/</span>
+              <a href="#" class="footer-link">Do Not Sell My Info</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link">Cookie Preferences</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link">Ad Choices</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link">Careers</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link">Subscribe to emails</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link">Integrity Helpline</a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link">Resources</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="footer-link">Contact Us</a>
+            </li>
+          </ul>
 
-  <!-- offcanvas AI data platform -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="aiDataPlatformSubMenu" aria-labelledby="aiDataPlatformSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="aiDataPlatformSubMenuTitle">AI Data Platform</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>AI Data Platform Overview</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Analytics</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Autonomous AI Database</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Fusion Data Intelligence</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Generative AI</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Object Store</span></button></li>
-      </ul>
-    </div>
-  </div>
+          <!-- Social icons -->
+          <ul class="nav align-items-center">
+            <li class="nav-item pe-4 ms-lg-5">
+              <a href="#" class="footer-link fs-3" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link fs-3" aria-label="X"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </li>
+            <li class="nav-item pe-4">
+              <a href="#" class="footer-link fs-3" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="footer-link fs-3" aria-label="YouTube"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
-  <!-- offcanvas cloud@customer -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="cloudAtCustomerSubMenu" aria-labelledby="cloudAtCustomerSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="cloudAtCustomerSubMenuTitle">Cloud@Customer</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- Offcanvas main -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
+      <div class="offcanvas-header">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mt-5 mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#cloudSubMenu"
+              aria-controls="cloudSubMenu"
+            >
+              <span>Cloud</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#multicloudDatabaseSubMenu"
+              aria-controls="multicloudDatabaseSubMenu"
+            >
+              <span>Multicloud Database</span
+              ><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#aiDataPlatformSubMenu"
+              aria-controls="aiDataPlatformSubMenu"
+            >
+              <span>AI Data Platform</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#cloudAtCustomerSubMenu"
+              aria-controls="cloudAtCustomerSubMenu"
+            >
+              <span>Cloud@Customer</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#fusionSubMenu"
+              aria-controls="fusionSubMenu"
+            >
+              <span>Fusion</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#healthSubMenu"
+              aria-controls="healthSubMenu"
+            >
+              <span>Health</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#industriesSubMenu"
+              aria-controls="industriesSubMenu"
+            >
+              <span>Industries</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>NetSuite</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#companySubMenu"
+              aria-controls="companySubMenu"
+            >
+              <span>Company</span><span aria-hidden="true">&gt;</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Cloud@Customer Overview</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Autonomous AI Database on Exadata Cloud@Customer</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Base Database Cloud@Customer</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Exadata Database Service on Cloud@Customer</span></button></li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- offcanvas fusion -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="fusionSubMenu" aria-labelledby="fusionSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="fusionSubMenuTitle">Fusion</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- offcanvas cloud -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="cloudSubMenu"
+      aria-labelledby="cloudSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="cloudSubMenuTitle">Cloud</h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Cloud Overview</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>AI and Machine Learning</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>AI Data Platform</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Analytics</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Billing and Cost Management</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Compute</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Database Services</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Developer Services</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Distributed Cloud and Multicloud</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Governance and Administration</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Identity and Security</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Integration</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Migration and Disaster Recovery Services</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Networking and Connectivity</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Observability and Management</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Storage</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Fusion Overview</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Enterprise Resource Planning (ERP)</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Human Capital Management (HCM)</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Customer Experience (CX)</span></button></li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- offcanvas health -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="healthSubMenu" aria-labelledby="healthSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="healthSubMenuTitle">Health</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- offcanvas multicloud database -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="multicloudDatabaseSubMenu"
+      aria-labelledby="multicloudDatabaseSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="multicloudDatabaseSubMenuTitle">
+          Multicloud Database
+        </h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Oracle AI Database Overview</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>AI Database</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Multicloud</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>MYSQL HeatWave</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>NoSQL</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>OpenSearch</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>PostgreSQL</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Redis Cache</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Clinical Applications</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Clinical and Financial Operations</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Consumer Experience</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Payer Operations</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Population Health</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Security</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Service and Support</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Enterprise Solutions</span></button></li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- offcanvas industries -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="industriesSubMenu" aria-labelledby="industriesSubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="industriesSubMenuTitle">Industries</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- offcanvas AI data platform -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="aiDataPlatformSubMenu"
+      aria-labelledby="aiDataPlatformSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="aiDataPlatformSubMenuTitle">
+          AI Data Platform
+        </h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>AI Data Platform Overview</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Analytics</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Autonomous AI Database</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Fusion Data Intelligence</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Generative AI</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Object Store</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Automotive</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Communications</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Construction and Engineering</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Defense and Intelligence</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Education</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Financial Services - Banking</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Government - National, State, Local</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Healthcare</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>High Technology</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Hospitality</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Industrial Manufacturing</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Life Sciences</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Media and Entertainment</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Oil and Gas</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Professional Services</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Public Safety - Police, Fire, Ambulance EMT</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Restaurants</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Retail</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Travel and Logistics</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Utilities</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Wholesale Distribution</span></button></li>
-      </ul>
-    </div>
-  </div>
 
-  <!-- offcanvas company -->
-  <div class="offcanvas offcanvas-start" tabindex="-1" id="companySubMenu" aria-labelledby="companySubMenuTitle">
-    <div class="offcanvas-header">
-      <button class="btn btn-link text-dark p-0 me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu" aria-label="Back to menu">
-        <i class="bi bi-arrow-left" aria-hidden="true"></i>
-      </button>
-      <h5 class="offcanvas-title" id="companySubMenuTitle">Company</h5>
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- offcanvas cloud@customer -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="cloudAtCustomerSubMenu"
+      aria-labelledby="cloudAtCustomerSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="cloudAtCustomerSubMenuTitle">
+          Cloud@Customer
+        </h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Cloud@Customer Overview</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Autonomous AI Database on Exadata Cloud@Customer</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Base Database Cloud@Customer</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Exadata Database Service on Cloud@Customer</span>
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="offcanvas-body">
-      <ul class="nav flex-column">
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>About Oracle</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>News and Events</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Support</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Customer Success Services</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Documentation and Downloads</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Customers</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Partners</span></button></li>
-        <li class="nav-item"><button class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4" type="button"><span>Developers</span></button></li>
-      </ul>
-    </div>
-  </div>
 
+    <!-- offcanvas fusion -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="fusionSubMenu"
+      aria-labelledby="fusionSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="fusionSubMenuTitle">Fusion</h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Fusion Overview</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Enterprise Resource Planning (ERP)</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Human Capital Management (HCM)</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Customer Experience (CX)</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- offcanvas health -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="healthSubMenu"
+      aria-labelledby="healthSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="healthSubMenuTitle">Health</h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Clinical Applications</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Clinical and Financial Operations</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Consumer Experience</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Payer Operations</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Population Health</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Security</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Service and Support</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Enterprise Solutions</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- offcanvas industries -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="industriesSubMenu"
+      aria-labelledby="industriesSubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="industriesSubMenuTitle">Industries</h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Automotive</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Communications</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Construction and Engineering</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Defense and Intelligence</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Education</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Financial Services - Banking</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Government - National, State, Local</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Healthcare</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>High Technology</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Hospitality</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Industrial Manufacturing</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Life Sciences</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Media and Entertainment</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Oil and Gas</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Professional Services</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Public Safety - Police, Fire, Ambulance EMT</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Restaurants</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Retail</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Travel and Logistics</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Utilities</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Wholesale Distribution</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- offcanvas company -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="companySubMenu"
+      aria-labelledby="companySubMenuTitle"
+    >
+      <div class="offcanvas-header">
+        <button
+          class="btn btn-link text-dark p-0 me-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sideMenu"
+          aria-controls="sideMenu"
+          aria-label="Back to menu"
+        >
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <h5 class="offcanvas-title" id="companySubMenuTitle">Company</h5>
+        <button
+          type="button"
+          class="btn-close ms-auto"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>About Oracle</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>News and Events</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Support</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Customer Success Services</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Documentation and Downloads</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Customers</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Partners</span>
+            </button>
+          </li>
+          <li class="nav-item">
+            <button
+              class="nav-link text-start w-100 d-flex justify-content-between align-items-center offcanvas-menu-button rounded mb-4"
+              type="button"
+            >
+              <span>Developers</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
